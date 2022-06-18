@@ -217,7 +217,7 @@ GO
 
 --EXEC [Reset Database]
 
--- añadir tipo de alimentos
+-- aÃ±adir tipo de alimentos
 
 INSERT INTO [TipoAlimento]
            ([nombre])
@@ -229,40 +229,40 @@ INSERT INTO [TipoAlimento]
 		   ('Proteinas'),
 		   ('Compuestos')
 
--- añadir alimentos
+-- aÃ±adir alimentos
 
--- añadir Carbohidratos (id = 1)
+-- aÃ±adir Carbohidratos (id = 1)
 EXEC [Aniadir Alimento] 'pan blanco', 266 ,  7.64 , 50.61 , 3.29, 100, 1
 EXEC [Aniadir Alimento] 'papa', 77 ,  2.02 , 17.47 , 0.09, 100, 1
 EXEC [Aniadir Alimento] 'arroz blanco', 204 ,  4.2 , 44.08 , 0.44, 100, 1
 
--- añadir Grasas (id = 2)
+-- aÃ±adir Grasas (id = 2)
 EXEC [Aniadir Alimento] 'Palta', 198, 8.78, 9.62, 14.55, 100, 2
 EXEC [Aniadir Alimento] 'Aceitunas', 145, 1.03, 3.84, 15.32, 100, 2
 EXEC [Aniadir Alimento] 'Pecanas', 715, 11.4, 4, 72.2, 100, 2
 
--- añadir Lacteos (id = 3)
+-- aÃ±adir Lacteos (id = 3)
 EXEC [Aniadir Alimento] 'leche entera', 60, 3.22, 4.25, 3.25, 100, 3
 EXEC [Aniadir Alimento] 'queso', 350 ,  22.21 , 4.71 , 26.91, 100, 3
 EXEC [Aniadir Alimento] 'Yogur Natural', 45, 5.40, 5.60, 0.10, 125, 3
 
--- añadir Frutas (id = 4)
+-- aÃ±adir Frutas (id = 4)
 EXEC [Aniadir Alimento] 'Platano',89 ,1.09 ,22.84 ,0.33 ,100 , 4
 EXEC [Aniadir Alimento] 'Aceitunas', 0.145, 1.03, 3.84, 15.32, 100 , 4
 EXEC [Aniadir Alimento] 'Mani', 0.567, 25.8, 16.13, 49.24, 100 , 4
 
--- añadir Proteinas (id = 5)
+-- aÃ±adir Proteinas (id = 5)
 EXEC [Aniadir Alimento] 'Almendras',578 ,21.26 ,19.74 ,50.64 ,100 ,5
 EXEC [Aniadir Alimento] 'Pechuga de Pollo',195,29.55,0,7.72,100 ,5
-EXEC [Aniadir Alimento] 'Salmón', 146, 21.62, 0, 5.93, 100, 5
+EXEC [Aniadir Alimento] 'SalmÃ³n', 146, 21.62, 0, 5.93, 100, 5
 EXEC [Aniadir Alimento] 'Carne', 282, 24.5, 0, 19.65, 100, 5
 
--- añadir Compuestos (id = 6)
+-- aÃ±adir Compuestos (id = 6)
 EXEC [Aniadir Alimento] 'Hamburguesas', 278, 29.67, 6.37, 14.11, 125, 6
 EXEC [Aniadir Alimento] 'Estofado de Pollo', 306, 16.88,32.65,12.2,252, 6
 EXEC [Aniadir Alimento] 'Ceviche', 125, 20.91, 6.7, 1.44, 186, 6
 
--- añadir Recetas
+-- aÃ±adir Recetas
 
 INSERT INTO Receta 
 VALUES 
@@ -277,7 +277,7 @@ VALUES
 	
 	( 17,  1, 0 ), -- #Hamburguesas#
 	( 1,  1, 30 ), -- pan blanco
-	( 19, 1, 95 ), -- carne
+	( 16, 1, 95 ), -- carne
 
 	( 18, 2, 0 ),   -- #Estofado de Pollo#
 	( 14, 2, 100 ), -- Pechuga de Pollo
@@ -285,19 +285,19 @@ VALUES
 	( 3, 2, 90 ),   -- arroz blanco
 
 	( 19, 3, 0),   -- #ceviche#
-	( 15, 3, 100 ) -- Salmón
+	( 15, 3, 100 ) -- SalmÃ³n
 
--- añadir clientes 
+-- aÃ±adir clientes 
 EXEC [Aniadir Cliente] 73895522, 22, 'renzo', 'mario@gmail.com', '926120193', '1999-03-15', 0
 EXEC [Aniadir Cliente] 73899385, 21, 'will', 'will@gmail.com', '936458696', '2000-03-15', 0
 EXEC [Aniadir Cliente] 73891935, 20, 'bruno', 'bruno@gmail.com', '996857351', '2000-01-30', 0
 
--- añadir nutricionistas
+-- aÃ±adir nutricionistas
 EXEC [Aniadir Nutricionista] 76983166, 22, 'anderson', 'anderson@gmail.com', '918365478', '1998-04-03', '1983675294861', 'soy muy estudioso'
 EXEC [Aniadir Nutricionista] 71693286, 20, 'mario', 'mario@gmail.com', '999136587', '1997-12-19', '3896245252788', 'tengo muchos conocimientos'
 
--- añadir horarios nutricionistas # horarios creados para un mejor filtrado mas no de uso del nutricionista
---								  # se añaden cada vez que un usuario empieza y acaba una jornada del dia
+-- aÃ±adir horarios nutricionistas # horarios creados para un mejor filtrado mas no de uso del nutricionista
+--								  # se aÃ±aden cada vez que un usuario empieza y acaba una jornada del dia
 --								  # se usan para darle una informacion estimada al cliente suscrito para que vea la frecuencia de disponibilidad de los nutricionistas
 INSERT INTO Horario
 VALUES
@@ -323,7 +323,7 @@ VALUES
 	(5, 115, DATEFROMPARTS(2022, 05, 31)), -- mario
 	(5, 100, DATEFROMPARTS(2022, 06, 30))  -- mario
 
--- añadir citas # c-cumplido, a-atendiendose, n-nocumplido, e-espera
+-- aÃ±adir citas # c-cumplido, a-atendiendose, n-nocumplido, e-espera
 
 INSERT INTO Cita
 VALUES
@@ -332,7 +332,7 @@ VALUES
 	(2, 4, '2020-06-02 15:30:00', 'c', 'esta promedio'),   -- will  / anderson / cumplido
 	(3, 5, '2020-08-04 15:00:00', 'c', 'esta promedio')    -- bruno / mario    / cumplido
 
--- añadir comentarios a citas
+-- aÃ±adir comentarios a citas
 INSERT INTO ComentarioExperiencia
 VALUES
 	(1, 'necesito segunda opinion no me gusto su veredicto', 3),
@@ -340,14 +340,14 @@ VALUES
 	(3, 'fue de ayuda', 3.5),
 	(4, 'exelente asesor', 5)
 
--- añadir tarjeta
+-- aÃ±adir tarjeta
 INSERT INTO Tarjeta
 VALUES
 	(1, '1938276093851', 'renzo', 29, 04, 161), -- renzo
 	(2, '2368579684537', 'will', 27, 05, 193),  -- will
 	(3, '5396847531269', 'bruno', 21, 05, 285)  -- bruno
 
--- añadir paquetes
+-- aÃ±adir paquetes
 
 INSERT INTO Paquete
 VALUES 
@@ -361,7 +361,7 @@ EXEC [Suscribirse] 1, 2 -- renzo / Platino
 EXEC [Suscribirse] 2, 3 -- will  / Golden
 EXEC [Suscribirse] 3, 3 -- bruno / Golden
 
--- añadir contactos
+-- aÃ±adir contactos
 
 INSERT INTO Contactos
 VALUES 
@@ -376,7 +376,7 @@ VALUES
 	(2, 65, 1.70,  DATETIMEFROMPARTS(2022, 05, 26, 15, 30, 0, 0)), -- will
 	(3, 60, 1.70,  DATETIMEFROMPARTS(2022, 05, 26, 18, 00, 0, 0)) -- bruno
 
--- añadir ingredientes base
+-- aÃ±adir ingredientes base
 
 INSERT INTO IngredientesBase
 VALUES 
@@ -426,12 +426,12 @@ VALUES
 	(14, 1), -- Pechuga de Pollo / renzo
 
 	(13, 2), -- Almendras / will 
-	(15, 2), -- Salmón / will 
+	(15, 2), -- SalmÃ³n / will 
 
 	(14, 3), -- Pechuga de Pollo / bruno 
-	(15, 3)  -- Salmón / bruno 
+	(15, 3)  -- SalmÃ³n / bruno 
 
--- añadir tipos de objetivo
+-- aÃ±adir tipos de objetivo
 
 INSERT INTO TipoObjetivo
 VALUES
@@ -439,7 +439,7 @@ VALUES
 	('Mantener Peso'),
 	('Subir Peso')
 
--- añadir momento dias
+-- aÃ±adir momento dias
 
 INSERT INTO MomentoDia
 VALUES
@@ -449,7 +449,7 @@ VALUES
 	('Merienda'),
 	('Cena')
 
--- añadir objetivos
+-- aÃ±adir objetivos
 INSERT INTO Objetivo
 VALUES
 	(1, NULL, 1, 90, 'n', DATEFROMPARTS(2022, 05, 29), NULL, 120), -- renzo / NULL / Bajar Peso / no cumplido
@@ -460,7 +460,7 @@ VALUES
 	(2, 4, 2, 65, 'p', DATEFROMPARTS(2022, 06, 02), NULL, 12), -- will / anderson / Mantener Peso / proceso
 	(3, 5, 2, 65, 'p', DATEFROMPARTS(2022, 08, 04), NULL, 10)  --  bruno/ mario / Mantener Peso / proceso
 
--- añadir resumen diario
+-- aÃ±adir resumen diario
 
 EXEC [Generar Resumen Diario Random] 1, '2022-05-29', '2020-07-01' -- renzo
 EXEC [Generar Resumen Diario Random] 2, '2022-05-29', '2020-06-02' -- will
