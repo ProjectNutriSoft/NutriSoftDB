@@ -251,6 +251,7 @@ CREATE TABLE Usuario (
     telefono varchar(25)  NOT NULL,
     fecha_nacimiento date  NOT NULL,
     fecha_registro datetime  NOT NULL,
+    contrasenia varchar(25) NOT NULL,
     CONSTRAINT Usuario_pk PRIMARY KEY  (id)
 );
 
