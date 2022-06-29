@@ -189,7 +189,7 @@ BEGIN
 		VALUES((RAND()*9), (RAND()*9), (RAND()*9), (RAND()*9))
 
 		INSERT INTO ResumenDiario 
-		VALUES (SCOPE_IDENTITY(), 1, @fechaIn)
+		VALUES (SCOPE_IDENTITY(), @id_cliente, @fechaIn)
 
 		SET @momDia = 1
 		SET @auxIden = SCOPE_IDENTITY()
